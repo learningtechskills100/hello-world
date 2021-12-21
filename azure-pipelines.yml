@@ -12,9 +12,9 @@ pool:
 # azure-pipelines.yml
 resources:
   repositories:
-  - repository: templates
+  - repository: learningtech
     type: git
-    name: MyProject/MyTemplates
+    name: learningtech/learningtech
     ref: refs/tags/v1
 
 extends:
