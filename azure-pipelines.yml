@@ -9,7 +9,6 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-# azure-pipelines.yml
 resources:
   repositories:
   - repository: learningtech
@@ -18,7 +17,7 @@ resources:
     
 
 extends:
-  template: template.yml@templates
+  template: template.yml@learningtech
   parameters:
     usersteps:
     - script: echo This is my first step
