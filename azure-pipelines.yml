@@ -15,7 +15,7 @@ resources:
   - repository: learningtech
     type: git
     name: learningtech/learningtech
-    ref: refs/tags/v1
+    
 
 extends:
   template: template.yml@templates
