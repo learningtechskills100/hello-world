@@ -9,11 +9,17 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+# azure-pipelines.yml
+resources:
+  repositories:
+  - repository: templates
+    type: git
+    name: MyProject/MyTemplates
+    ref: refs/tags/v1
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+extends:
+  template: template.yml@templates
+  parameters:
+    usersteps:
+    - script: echo This is my first step
+    - script: echo This is my second step
